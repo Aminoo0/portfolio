@@ -34,7 +34,7 @@ export default function Main() {
     }
 
     return (
-        <section className='flex flex-wrap md:p-16 p-10'>
+        <section className='flex flex-wrap md:p-16 lg:p-10 p-2'>
             <motion.div initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }} className='w-full xl:w-1/4'>
                 <ul className='text-center font-semibold flex flex-wrap justify-between'>
                     <li onClick={() => allProject('1', projects)} className={`${showactive === '1' ? 'bg-slate-700 text-slate-300' : ''} w-full cursor-pointer py-3 dark:bg-[#252529] rounded-2xl mb-2 border border-[#36363b] hover:tracking-widest hover:text-[#2bd5b6] duration-200`}>All Projects</li>

@@ -11,7 +11,7 @@ export default function ContactUs() {
     const [state, handleSubmit] = useForm("meojqpyl");
 
     return (
-        <section className='md:p-16 p-10'>
+        <section className='md:p-16 lg:p-10 p-2'>
             <motion.div initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }} className='flex items-center w-full'>
                 <i className="fa-regular fa-envelope text-3xl mr-10"></i>
                 <h2 className='text-5xl'>Contact Us</h2>
@@ -25,7 +25,7 @@ export default function ContactUs() {
                         <ValidationError
                             prefix="Email"
                             field="email"
-                            // errors={state.errors}
+                        // errors={state.errors}
                         />
                         {state.errors ? <div class="p-4 w-full my-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">Email should be an email!</div> : null}
                     </div>
