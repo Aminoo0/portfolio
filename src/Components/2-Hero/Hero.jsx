@@ -43,8 +43,8 @@ export default function Hero() {
                 <motion.h1 variants={pvariants} initial='hidden' whileInView='visible' transition={{ duration: 2 }} className='text-3xl'>{mainText.split('').map((chr, index) => <motion.span key={index} variants={svariants}>{chr}</motion.span>)}</motion.h1>
                 <p className='text-slate-800 dark:text-slate-400 my-5'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore sunt eos neque distinctio exercitationem modi.</p>
                 <ul className='flex gap-5'>
-                    <motion.li whileHover={{ rotate: '360deg', scale: 1.1, color: '#2bd5b6' }} transition={{ duration: 1 }}><a target='black' href="https://github.com/Aminoo0"><i className="fa-brands fa-github text-2xl cursor-pointer"></i></a></motion.li>
-                    <motion.li whileHover={{ rotate: '360deg', scale: 1.1, color: '#2bd5b6' }} transition={{ duration: 1 }}><a target='black' href='#' ><i className="fa-brands fa-linkedin text-2xl cursor-pointer"></i></a></motion.li>
+                    <motion.li whileHover={{ rotate: '360deg', scale: 1.1, color: '#2bd5b6' }} transition={{ duration: 1 }}><a target='black' href="https://github.com/Aminoo0"><i className="fa-brands fa-github text-2xl cursor-pointer text-slate-900 dark:text-slate-100"></i></a></motion.li>
+                    <motion.li whileHover={{ rotate: '360deg', scale: 1.1, color: '#2bd5b6' }} transition={{ duration: 1 }}><a target='black' href='#' ><i className="fa-brands fa-linkedin text-2xl cursor-pointer text-slate-900 dark:text-slate-100"></i></a></motion.li>
                 </ul>
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }} className='w-full lg:w-2/5'>
