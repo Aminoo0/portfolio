@@ -35,7 +35,7 @@ export default function Hero() {
 
     return (
         <section className='flex flex-wrap mt-20 md:p-16 lg:p-10 p-2'>
-            <motion.div drag dragConstraints={{ left: -50, right: 50, top: -50, bottom: 50 }} initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }} className='w-full lg:w-3/5'>
+            <motion.div initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }} className='w-full lg:w-3/5'>
                 <div className='flex items-end mb-10'>
                     <img className='w-20 rounded-full border border-[#414148]' src={mainPhoto} alt="" />
                     <i className="fa-solid fa-check"></i>
