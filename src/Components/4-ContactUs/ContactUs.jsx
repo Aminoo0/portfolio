@@ -40,7 +40,7 @@ export default function ContactUs() {
                     <motion.button type="submit" disabled={state.submitting} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 3 }} className="text-slate-900 dark:text-white w-full mt-5 bg-[#f1f1f3] dark:bg-[#252529] p-3 px-8 rounded-2xl border border-[#898998] hover:border-[#3f3f44] duration-200">{state.submitting ? 'submitting ...' : 'submit'}</motion.button>
                     {state.succeeded ? <div class="p-4 my-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">Thanks For Message Us</div> : null}
                 </motion.form>
-                <motion.div initial={{ x: 200, opacity: 0 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }} className='w-full lg:w-1/2'>
+                <motion.div drag dragConstraints={{ left: -50, right: 50, top: -50, bottom: 50 }} initial={{ x: 200, opacity: 0 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }} className='w-full lg:w-1/2'>
                     <Lottie style={{ height: '500px', width: '100%' }} animationData={contactUs} />
                 </motion.div>
             </div>
