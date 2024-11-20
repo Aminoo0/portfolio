@@ -13,15 +13,15 @@ export default function Main() {
 
     const [showactive, setShowActive] = useState('1')
     let projects = [
-        { id: '1', category: 'javascript', img: card1, title: 'CRUDS', link: 'https://github.com/Aminoo0/CURDS', webSite: 'https://aminoo0.github.io/CURDS/' },
-        { id: '2', category: 'javascript', img: card2, title: 'Weather App', link: 'https://github.com/Aminoo0/Weather', webSite: 'https://aminoo0.github.io/Weather/' },
-        { id: '3', category: 'javascript', img: card2, title: 'Quiz', link: 'https://github.com/Aminoo0/Quiz', webSite: 'https://aminoo0.github.io/Quiz/' },
-        { id: '4', category: 'javascript', img: card2, title: 'Yummii', link: 'https://github.com/Aminoo0/Yummii', webSite: 'https://aminoo0.github.io/Yummii/' },
+        { id: '1', category: 'javascript', img: card1, title: 'CRUDS', link: 'https://github.com/Aminoo0/CURDS', webSite: 'https://aminoo0.github.io/CURDS/', desc: 'CURDS Operations Using HTML, CSS, Tailwind, JavaScript and localStorge' },
+        { id: '2', category: 'javascript', img: card2, title: 'Weather App', link: 'https://github.com/Aminoo0/Weather', webSite: 'https://aminoo0.github.io/Weather/', desc: 'recipes web site Using HTML, CSS, Tailwind, JavaScript and Api' },
+        { id: '3', category: 'javascript', img: card2, title: 'Quiz', link: 'https://github.com/Aminoo0/Quiz', webSite: 'https://aminoo0.github.io/Quiz/', desc: 'Quiz App Using HTML, CSS, Tailwind, JavaScript and Api' },
+        { id: '4', category: 'javascript', img: card2, title: 'Yummii', link: 'https://github.com/Aminoo0/Yummii', webSite: 'https://aminoo0.github.io/Yummii/', desc: 'Yummi  recipes web site Using HTML, CSS, Tailwind, JavaScript and Api' },
         { id: '5', category: 'html', img: card3, title: '', link: '', webSite: '' },
-        { id: '6', category: 'react', img: card4, title: 'E-Commerce-Fresh-Cart', link: 'https://github.com/Aminoo0/E-Commerce-Fresh-Cart', webSite: 'https://aminoo0.github.io/E-Commerce-Fresh-Cart/' },
-        { id: '7', category: 'react', img: card4, title: 'Alasayal-app', link: 'https://github.com/Aminoo0/Alasayal-app', webSite: 'https://`alasayal-app.vercel.app' },
-        { id: '8', category: 'react', img: card6, title: 'Alasayal-app-Engilsh', link: 'https://github.com/Aminoo0/Alasayal-app-Engilsh', webSite: 'https://alasayal-app-engilsh.vercel.app' },
-        { id: '9', category: 'next', img: card5, title: 'On-DM', link: 'https://github.com/Aminoo0/on-dm',webSite:'https://on-dm.vercel.app/' },
+        { id: '6', category: 'react', img: card4, title: 'E-Commerce-Fresh-Cart', link: 'https://github.com/Aminoo0/E-Commerce-Fresh-Cart', webSite: 'https://aminoo0.github.io/E-Commerce-Fresh-Cart/', desc: 'E-Commerce App Using HTML, CSS, Tailwind, JavaScript, Api, React.js, React-Query , State Management' },
+        { id: '7', category: 'react', img: card4, title: 'Alasayal-app', link: 'https://github.com/Aminoo0/Alasayal-app', webSite: 'https://`alasayal-app.vercel.app', desc: 'Using HTML, CSS, Tailwind, JavaScript, React.js, framer-motion, form-spree, ' },
+        { id: '8', category: 'react', img: card6, title: 'Alasayal-app-Engilsh', link: 'https://github.com/Aminoo0/Alasayal-app-Engilsh', webSite: 'https://alasayal-app-engilsh.vercel.app', desc: 'Using HTML, CSS, Tailwind, JavaScript, React.js, framer-motion, form-spree, ' },
+        { id: '9', category: 'next', img: card5, title: 'On-DM', link: 'https://github.com/Aminoo0/on-dm', webSite: 'https://on-dm.vercel.app/', desc: 'Using HTML, CSS, Tailwind, JavaScript, Next.js, framer-motion, ' },
     ]
     const [allProjects, setAllProjects] = useState(projects)
 
@@ -57,7 +57,7 @@ export default function Main() {
                                 </a>
                                 <div className='p-3 bg-[#f7f7f9] dark:bg-[#252529]'>
                                     <h2 className='text-2xl text-blackdark: dark:text-white'>{card.title}</h2>
-                                    <p className='my-3 text-slate-500 text-md border-b border-[#6666676b]'>0</p>
+                                    <p className='my-3 text-slate-500 text-md border-b border-[#6666676b]'>{card.desc}</p>
                                     <ul className='flex gap-5'>
                                         <motion.li whileHover={{ rotate: '360deg', scale: 1.1, color: '#2bd5b6' }} transition={{ duration: 1 }}><a target='_blank' href={card.link}><i className="fa-brands fa-github text-xl cursor-pointer"></i></a></motion.li>
                                         <motion.li whileHover={{ rotate: '360deg', scale: 1.1, color: '#2bd5b6' }} transition={{ duration: 1 }}><a target='_blank' href='https://www.linkedin.com/in/abdalrhman-mohamed-815633260/' ><i className="fa-brands fa-linkedin text-xl cursor-pointer"></i></a></motion.li>
