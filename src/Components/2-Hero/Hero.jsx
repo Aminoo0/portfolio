@@ -17,7 +17,7 @@ export default function Hero() {
     const cvOut = useRef()
     useEffect(() => {
         window.addEventListener('scroll', () => {
-            console.log(cv.current.classList);
+            // console.log(cv.current.classList);
             if (window.scrollY <= 500) {
                 cv.current.classList.remove('hidden')
                 cvOut.current.classList.add('hidden')
@@ -78,7 +78,7 @@ export default function Hero() {
                 </div>
             </section>
             <motion.div initial={{ y: 100 }} whileHover={{ scale: 1.15 }} whileInView={{ y: 0 }} transition={{ duration: .5 }} ref={cvOut} className={`hidden w-3/4 justify-center bottom-20 z-[9999]`}>
-                <a href='Abdalrhman Mohamed.pdf' download={true} className='w-1/2 lg:w-1/4 text-center bg-gradient-to-r from-slate-700 to-emerald-800 hover:from-emerald-800 hover:to-slate-700 rounded-lg px-10 py-4'>Download CV</a>
+                <a href='Abdalrhman Mohamed.pdf' download={true} className='w-2/3 lg:w-1/4 text-center bg-gradient-to-r from-slate-700 to-emerald-800 hover:from-emerald-800 hover:to-slate-700 rounded-lg px-10 py-4'>Download CV</a>
             </motion.div>
         </div>
     )
