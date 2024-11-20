@@ -49,7 +49,7 @@ export default function Main() {
             </motion.div>
             <AnimatePresence>
                 <motion.div initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} className='w-full xl:w-3/4 flex flex-wrap gap-y-5'>
-                    {allProjects.map((card, index) =>
+                    {allProjects.reverse().map((card, index) =>
                         <motion.div key={index} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 2 }} className='px-3 w-full lg:w-1/2 2xl:w-1/3'>
                             <motion.div whileHover={{ rotate: '-5deg', scale: 1.05, borderColor: '#36363b' }} className='border border-[#666667] rounded-lg'>
                                 <a target='_blank' href={`${card.webSite}`}>
