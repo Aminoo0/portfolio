@@ -63,7 +63,7 @@ export default function Hero() {
                     <motion.h1 variants={pvariants} initial='hidden' whileInView='visible' transition={{ duration: 2 }} className='text-3xl capitalize'>{mainText.split('').map((chr, index) => <motion.span key={index} variants={svariants}>{chr}</motion.span>)}</motion.h1>
                     <p className='text-slate-800 dark:text-slate-400 my-5'></p>
                     <div className='my-10 z-50'>
-                        <a ref={cv} href='Abdalrhman Mohamed.pdf' download={true} className='w-40 bg-gradient-to-r from-slate-700 to-emerald-800 hover:from-emerald-800 hover:to-slate-700 rounded-lg px-10 py-4'>Download CV</a>
+                        <a ref={cv} href='Abdalrhman Mohamed.pdf' download={true} className='w-40 from-slate-400 to-emerald-400 hover:from-emerald-400 hover:to-slate-400 font-semibold hover:to-slate-700 rounded-lg px-10 py-4 bg-gradient-to-r dark:from-slate-700 dark:to-emerald-800 dark:hover:from-emerald-800 dark:hover:to-slate-700'>Download CV</a>
                     </div>
                     <ul className='flex gap-5'>
                         <motion.li whileHover={{ rotate: '360deg', scale: 1.1, color: '#2bd5b6', scale: 1.5 }} transition={{ duration: 1 }}><a target='_blank' href={'https://github.com/Aminoo0'}><i className="fa-brands fa-github text-2xl cursor-pointer text-slate-900 dark:text-slate-100"></i></a></motion.li>
@@ -78,7 +78,7 @@ export default function Hero() {
                 </div>
             </section>
             <motion.div initial={{ y: 100 }} whileHover={{ scale: 1.15 }} whileInView={{ y: 0 }} transition={{ duration: .5 }} ref={cvOut} className={`hidden w-3/4 justify-center bottom-20 z-[9999]`}>
-                <a href='Abdalrhman Mohamed.pdf' download={true} className='w-2/3 lg:w-1/4 text-center bg-gradient-to-r from-slate-700 to-emerald-800 hover:from-emerald-800 hover:to-slate-700 rounded-lg px-10 py-4'>Download CV</a>
+                <a href='Abdalrhman Mohamed.pdf' download={true} className='w-2/3 from-slate-400 to-emerald-400 hover:from-emerald-400 hover:to-slate-400 font-semibold lg:w-1/4 text-center bg-gradient-to-r dark:from-slate-700 dark:to-emerald-800 dark:hover:from-emerald-800 dark:hover:to-slate-700 rounded-lg px-10 py-4'>Download CV</a>
             </motion.div>
         </div>
     )
