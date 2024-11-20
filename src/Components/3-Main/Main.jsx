@@ -7,18 +7,22 @@ import card4 from '../../assets/Reactportfoliowebsite/4.jpg'
 import card5 from '../../assets/Reactportfoliowebsite/5.jpg'
 import card6 from '../../assets/Reactportfoliowebsite/6.jpg'
 import { motion, AnimatePresence } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 
 export default function Main() {
 
     const [showactive, setShowActive] = useState('1')
     let projects = [
-        { id: '1', category: 'react', img: card1, },
-        { id: '2', category: 'javascript', img: card2, },
-        { id: '3', category: 'html', img: card3, },
-        { id: '4', category: 'react', img: card4, },
-        { id: '5', category: 'next', img: card5, },
-        { id: '6', category: 'next', img: card6, },
+        { id: '1', category: 'javascript', img: card1, title: 'CRUDS', link: 'https://github.com/Aminoo0/CURDS', webSite: 'https://aminoo0.github.io/CURDS/' },
+        { id: '2', category: 'javascript', img: card2, title: 'Weather App', link: 'https://github.com/Aminoo0/Weather', webSite: 'https://aminoo0.github.io/Weather/' },
+        { id: '3', category: 'javascript', img: card2, title: 'Quiz', link: 'https://github.com/Aminoo0/Quiz', webSite: 'https://aminoo0.github.io/Quiz/' },
+        { id: '4', category: 'javascript', img: card2, title: 'Yummii', link: 'https://github.com/Aminoo0/Yummii', webSite: 'https://aminoo0.github.io/Yummii/' },
+        { id: '5', category: 'html', img: card3, title: '', link: '', webSite: '' },
+        { id: '6', category: 'react', img: card4, title: 'E-Commerce-Fresh-Cart', link: 'https://github.com/Aminoo0/E-Commerce-Fresh-Cart', webSite: 'https://aminoo0.github.io/E-Commerce-Fresh-Cart/' },
+        { id: '7', category: 'react', img: card4, title: 'Alasayal-app', link: 'https://github.com/Aminoo0/Alasayal-app', webSite: 'https://alasayal-app.vercel.app' },
+        { id: '8', category: 'react', img: card6, title: 'Alasayal-app-Engilsh', link: 'https://github.com/Aminoo0/Alasayal-app-Engilsh', webSite: 'https://alasayal-app-engilsh.vercel.app' },
+        { id: '9', category: 'next', img: card5, title: 'On-DM', link: 'https://github.com/Aminoo0/on-dm',webSite:'https://on-dm.vercel.app/' },
     ]
     const [allProjects, setAllProjects] = useState(projects)
 
@@ -49,13 +53,15 @@ export default function Main() {
                     {allProjects.map((card, index) =>
                         <motion.div key={index} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 2 }} className='px-3 w-full lg:w-1/2 2xl:w-1/3'>
                             <motion.div whileHover={{ rotate: '-5deg', scale: 1.05, borderColor: '#36363b' }} className='border border-[#666667] rounded-lg'>
-                                <img className='w-full rounded-lg' src={card.img} alt="" />
+                                <a target='_blank' href={`${card.webSite}`}>
+                                    <img className='w-full rounded-lg' src={card.img} alt="" />
+                                </a>
                                 <div className='p-3 bg-[#f7f7f9] dark:bg-[#252529]'>
-                                    <h2 className='text-2xl text-blackdark: dark:text-white'>Lorem, ipsum dolor.</h2>
-                                    <p className='my-3 text-slate-500 text-md border-b border-[#6666676b]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, ad?</p>
+                                    <h2 className='text-2xl text-blackdark: dark:text-white'>{card.title}</h2>
+                                    <p className='my-3 text-slate-500 text-md border-b border-[#6666676b]'>0</p>
                                     <ul className='flex gap-5'>
-                                        <motion.li whileHover={{ rotate: '360deg', scale: 1.1, color: '#2bd5b6' }} transition={{ duration: 1 }}><a target='black' href="https://github.com/Aminoo0"><i className="fa-brands fa-github text-xl cursor-pointer"></i></a></motion.li>
-                                        <motion.li whileHover={{ rotate: '360deg', scale: 1.1, color: '#2bd5b6' }} transition={{ duration: 1 }}><a target='black' href='#' ><i className="fa-brands fa-linkedin text-xl cursor-pointer"></i></a></motion.li>
+                                        <motion.li whileHover={{ rotate: '360deg', scale: 1.1, color: '#2bd5b6' }} transition={{ duration: 1 }}><a target='_blank' href={card.link}><i className="fa-brands fa-github text-xl cursor-pointer"></i></a></motion.li>
+                                        <motion.li whileHover={{ rotate: '360deg', scale: 1.1, color: '#2bd5b6' }} transition={{ duration: 1 }}><a target='_blank' href='https://www.linkedin.com/in/abdalrhman-mohamed-815633260/' ><i className="fa-brands fa-linkedin text-xl cursor-pointer"></i></a></motion.li>
                                     </ul>
                                 </div>
                             </motion.div>
